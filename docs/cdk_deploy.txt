@@ -1,0 +1,30 @@
+# reference taken from aws documentation - https://cdkworkshop.com/30-python.html
+
+# steps to deploy cdk stack
+
+# Create an empty directory on your system:
+mkdir ukb_payroll_custom_code && cd ukb_payroll_custom_code
+
+# command to create a new Python CDK project:
+cdk init sample-app --language python
+
+# activate the Virtualenv
+source .venv/bin/activate
+
+# install the required python modules
+pip install -r requirements.txt
+
+# command to synthesize a CDK app
+cdk synth
+
+# command to install the bootstrap stack into an environment
+cdk bootstrap
+
+# command to check diff
+cdk diff
+
+# command to deploy a CDK app
+cdk deploy
+
+# command to hotswap deploy during development only
+cdk deploy --hotswap
