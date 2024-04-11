@@ -3,7 +3,7 @@
 # steps to deploy cdk stack
 
 # Create an empty directory on your system:
-mkdir kd_custom_code && cd kd_custom_code
+mkdir aws_cdk_poc && cd aws_cdk_poc
 
 # command to create a new Python CDK project:
 cdk init sample-app --language python
@@ -14,11 +14,16 @@ source .venv/bin/activate
 # install the required python modules
 pip install -r requirements.txt
 
-# command to synthesize a CDK app
+## define resources in the aws_cdk_poc_stack.py file
+
+# command to synthesize the CloudFormation template for this code
 cdk synth
 
-# command to install the bootstrap stack into an environment
+# command to install the bootstrap stack 'CDKToolkit' into the environment
 cdk bootstrap
+
+# command to check diff
+cdk list
 
 # command to check diff
 cdk diff
@@ -28,3 +33,6 @@ cdk deploy
 
 # command to hotswap deploy during development only
 cdk deploy --hotswap
+
+# command to delete the above created stack
+cdk destroy
