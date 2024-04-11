@@ -3,7 +3,7 @@
 # steps to deploy cdk stack
 
 # Create an empty directory on your system:
-mkdir ukb_payroll_custom_code && cd ukb_payroll_custom_code
+mkdir kd_custom_code && cd kd_custom_code
 
 # command to create a new Python CDK project:
 cdk init sample-app --language python
